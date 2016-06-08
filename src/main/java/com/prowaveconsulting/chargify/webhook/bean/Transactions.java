@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.prowave.chargify.webhook.bean;
+package com.prowaveconsulting.chargify.webhook.bean;
 
 import java.util.ArrayList;
 import java.util.List;

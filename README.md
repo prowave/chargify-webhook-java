@@ -3,14 +3,14 @@ Java library to parse the request body of a Chargify Webhook.
 
 ## Quick Start
 
-To use this `chargify-webhook-java` project, use clone and build this repository, or use Maven.
+To use this `chargify-webhook-java` project. Clone and build this repository, or use Maven.
 
 ### Releases
 
 Stable releases will be published to the central maven repository.
 
 	<dependency>
-		<groupId>com.prowave</groupId>
+		<groupId>com.prowaveconsulting</groupId>
 		<artifactId>chargify-webhook-java</artifactId>
 		<version>1.0.0</version>
 	</dependency>
@@ -55,7 +55,9 @@ Once you have the `ChargifyWebhook` from the `ChargifyWebhookParser.parse()` met
 
 1. You can access the `Map<String, Object>` directly from the `ChargifyWebhook.getPayload()` method.  This is a bit cumbersome as you need to cast you `Object`s to `String` or `Map<>` depending on what node you are on, and this requires knowledge of the message you received.
 
-2. You can convert the Map to JSON using Jackson2 (which is a required dependency of this project.  This is as simple as
+2. You can convert the Map to JSON using Jackson2 (which is a required dependency of this project.  
+
+This is as simple as:
 
 	String jsonMessage = mapper.writeValueAsString(chargifyWebhook);
 
