@@ -3,7 +3,7 @@ Java library to parse the request body of a Chargify Webhook.
 
 ## Quick Start
 
-To use this `chargify-webhook-java` project, use clone and build this repository, or use Maven.
+To use this `chargify-webhook-java` project. Clone and build this repository, or use Maven.
 
 ### Releases
 
