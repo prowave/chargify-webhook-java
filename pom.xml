@@ -5,12 +5,12 @@
 	<artifactId>chargify-webhook-java</artifactId>
 	<packaging>jar</packaging>
 	<name>Chargify Webhook Parser</name>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<description>Parses the payload from a Chargify Webhook.</description>
 	<url>https://github.com/prowave/chargify-webhook-java</url>
 
 	<issueManagement>
-		<url>https://github.com/kevinsawicki/github-maven-example/issues</url>
+		<url>https://github.com/prowave/chargify-webhook-java/issues</url>
 		<system>GitHub Issues</system>
 	</issueManagement>
 
