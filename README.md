@@ -55,7 +55,9 @@ Once you have the `ChargifyWebhook` from the `ChargifyWebhookParser.parse()` met
 
 1. You can access the `Map<String, Object>` directly from the `ChargifyWebhook.getPayload()` method.  This is a bit cumbersome as you need to cast you `Object`s to `String` or `Map<>` depending on what node you are on, and this requires knowledge of the message you received.
 
-2. You can convert the Map to JSON using Jackson2 (which is a required dependency of this project.  This is as simple as:
+2. You can convert the Map to JSON using Jackson2 (which is a required dependency of this project.  
+
+This is as simple as:
 
 	String jsonMessage = mapper.writeValueAsString(chargifyWebhook);
 
