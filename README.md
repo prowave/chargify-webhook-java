@@ -10,7 +10,7 @@ To use this `chargify-webhook-java` project. Clone and build this repository, or
 Stable releases will be published to the central maven repository.
 
 	<dependency>
-		<groupId>com.prowave</groupId>
+		<groupId>com.prowaveconsulting</groupId>
 		<artifactId>chargify-webhook-java</artifactId>
 		<version>1.0.0</version>
 	</dependency>
