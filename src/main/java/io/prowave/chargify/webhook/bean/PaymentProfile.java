@@ -14,11 +14,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.prowaveconsulting.chargify.webhook.bean;
+package io.prowave.chargify.webhook.bean;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class CreditCard {
+public class PaymentProfile {
 
 	private Long id;
 
@@ -45,33 +45,6 @@ public class CreditCard {
 
 	@JsonProperty("last_name")
 	private String lastName;
-
-	@JsonProperty("vault_token")
-	private String vaultToken;
-
-	@JsonProperty("current_vault")
-	private String currentVault;
-
-	@JsonProperty("masked_card_number")
-	private String maskedCreditCard;
-
-	@JsonProperty("card_type")
-	private String cardType;
-
-	@JsonProperty("payment_type")
-	private String paymentType;
-
-	@JsonProperty("expiration_year")
-	private String expirationYear;
-
-	@JsonProperty("expiration_month")
-	private String expirationMonth;
-
-	@JsonProperty("customer_vault_token")
-	private String customerVaultToken;
-
-	@JsonProperty("customer_id")
-	private Long customerId;
 
 	public Long getId() {
 		return id;
@@ -143,78 +116,6 @@ public class CreditCard {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
-	}
-
-	public String getVaultToken() {
-		return vaultToken;
-	}
-
-	public void setVaultToken(String vaultToken) {
-		this.vaultToken = vaultToken;
-	}
-
-	public String getCurrentVault() {
-		return currentVault;
-	}
-
-	public void setCurrentVault(String currentVault) {
-		this.currentVault = currentVault;
-	}
-
-	public String getMaskedCreditCard() {
-		return maskedCreditCard;
-	}
-
-	public void setMaskedCreditCard(String maskedCreditCard) {
-		this.maskedCreditCard = maskedCreditCard;
-	}
-
-	public String getCardType() {
-		return cardType;
-	}
-
-	public void setCardType(String cardType) {
-		this.cardType = cardType;
-	}
-
-	public String getPaymentType() {
-		return paymentType;
-	}
-
-	public void setPaymentType(String paymentType) {
-		this.paymentType = paymentType;
-	}
-
-	public String getExpirationYear() {
-		return expirationYear;
-	}
-
-	public void setExpirationYear(String expirationYear) {
-		this.expirationYear = expirationYear;
-	}
-
-	public String getExpirationMonth() {
-		return expirationMonth;
-	}
-
-	public void setExpirationMonth(String expirationMonth) {
-		this.expirationMonth = expirationMonth;
-	}
-
-	public String getCustomerVaultToken() {
-		return customerVaultToken;
-	}
-
-	public void setCustomerVaultToken(String customerVaultToken) {
-		this.customerVaultToken = customerVaultToken;
-	}
-
-	public Long getCustomerId() {
-		return customerId;
-	}
-
-	public void setCustomerId(Long customerId) {
-		this.customerId = customerId;
 	}
 
 }

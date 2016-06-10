@@ -14,47 +14,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.prowaveconsulting.chargify.webhook;
+package io.prowave.chargify.webhook.bean;
 
-import java.util.Map;
+public class Site {
 
-/**
- * Simplest form of represenation of the data structure in a Charfiy Webhook.
- * 
- * <i>This can be enhanced with fully typed POJOs to replace the Map structure.</i>
- * 
- * @author David Webb
- * @since 1.0.0
- *
- */
-public class ChargifyWebhook {
+	private Long id;
+	private String subdomain;
 
-	private String id;
-	private String event;
-	private Map<String, Object> payload;
-
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public String getEvent() {
-		return event;
+	public String getSubdomain() {
+		return subdomain;
 	}
 
-	public void setEvent(String event) {
-		this.event = event;
-	}
-
-	public Map<String, Object> getPayload() {
-		return payload;
-	}
-
-	public void setPayload(Map<String, Object> payload) {
-		this.payload = payload;
+	public void setSubdomain(String subdomain) {
+		this.subdomain = subdomain;
 	}
 
 }

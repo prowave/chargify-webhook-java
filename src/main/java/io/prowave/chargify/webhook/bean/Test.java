@@ -14,27 +14,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.prowaveconsulting.chargify.webhook.bean;
+package io.prowave.chargify.webhook.bean;
 
-public class Site {
+public class Test {
 
-	private Long id;
-	private String subdomain;
+	private String chargify;
 
-	public Long getId() {
-		return id;
+	public String getChargify() {
+		return chargify;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getSubdomain() {
-		return subdomain;
-	}
-
-	public void setSubdomain(String subdomain) {
-		this.subdomain = subdomain;
+	public void setChargify(String chargify) {
+		this.chargify = chargify;
 	}
 
 }

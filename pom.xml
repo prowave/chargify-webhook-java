@@ -1,11 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.prowaveconsulting</groupId>
+	<groupId>io.prowave</groupId>
 	<artifactId>chargify-webhook-java</artifactId>
 	<packaging>jar</packaging>
 	<name>Chargify Webhook Parser</name>
-	<version>1.0.1</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<description>Parses the payload from a Chargify Webhook.</description>
 	<url>https://github.com/prowave/chargify-webhook-java</url>
 
@@ -31,13 +31,19 @@
 
 	<developers>
 		<developer>
-			<email>dwebb at prowaveconsulting (.) com</email>
+			<email>dwebb at prowave (.) io</email>
 			<name>David Webb</name>
 			<url>https://github.com/prowave</url>
 			<id>prowave</id>
+			<organization>Prowave Consulting, LLC</organization>
+			<organizationUrl>http://prowave.io</organizationUrl>
+			<timezone>EDT</timezone>
+			<roles>
+				<role>Developer</role>
+			</roles>
 		</developer>
 	</developers>
-	
+
 	<properties>
 		<slf4j>1.7.21</slf4j>
 		<jackson-2-version>2.7.4</jackson-2-version>
@@ -101,17 +107,6 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.sonatype.plugins</groupId>
-				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>1.6.3</version>
-				<extensions>true</extensions>
-				<configuration>
-					<serverId>ossrh</serverId>
-					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-					<autoReleaseAfterClose>true</autoReleaseAfterClose>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>

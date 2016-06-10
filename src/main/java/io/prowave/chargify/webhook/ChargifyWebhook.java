@@ -14,39 +14,47 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.prowaveconsulting.chargify.webhook.bean;
+package io.prowave.chargify.webhook;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.Map;
 
-public class SignupSuccess {
+/**
+ * Simplest form of represenation of the data structure in a Charfiy Webhook.
+ * 
+ * <i>This can be enhanced with fully typed POJOs to replace the Map structure.</i>
+ * 
+ * @author David Webb
+ * @since 1.0.0
+ *
+ */
+public class ChargifyWebhook {
 
-	@JsonProperty("event_id")
-	private Long eventId;
-	private Site site;
-	private Subscription subscription;
+	private String id;
+	private String event;
+	private Map<String, Object> payload;
 
-	public Long getEventId() {
-		return eventId;
+	public String getId() {
+		return id;
 	}
 
-	public void setEventId(Long eventId) {
-		this.eventId = eventId;
+	public void setId(String id) {
+		this.id = id;
 	}
 
-	public Subscription getSubscription() {
-		return subscription;
+	public String getEvent() {
+		return event;
 	}
 
-	public void setSubscription(Subscription subscription) {
-		this.subscription = subscription;
+	public void setEvent(String event) {
+		this.event = event;
 	}
 
-	public Site getSite() {
-		return site;
+	public Map<String, Object> getPayload() {
+		return payload;
 	}
 
-	public void setSite(Site site) {
-		this.site = site;
+	public void setPayload(Map<String, Object> payload) {
+		this.payload = payload;
 	}
 
 }

@@ -10,9 +10,9 @@ To use this `chargify-webhook-java` project. Clone and build this repository, or
 Stable releases will be published to the central maven repository.
 
 	<dependency>
-		<groupId>com.prowaveconsulting</groupId>
+		<groupId>io.prowave</groupId>
 		<artifactId>chargify-webhook-java</artifactId>
-		<version>1.0.1</version>
+		<version>1.0.2</version>
 	</dependency>
 
 ### Snapshots
@@ -73,15 +73,46 @@ Same as above, but you can pass the raw RequestBody as a `String` to the `Chargi
 
 ## Whats included
 
-### Parser and limited POJO Support
+### Message Parser
 
 * The requestBody parser
 * The ability to create JSON for any webhook message type
-* The `SignupSuccess` POJO and conversion of the message for that POJO
+
+### POJO Support
+
+#### Provided
+
+* `Test`
+* `SignupSuccess`
+* `CusomterUpdate`
+
+#### Backlog
+
+* `SignupFailure`
+* `RenewalSuccess`
+* `RenewalFailure`
+* `PaymentSuccess`
+* `PaymentFailure`
+* `BillingDateChange`
+* `SubscriptionStateChange`
+* `SubscriptionProductChange`
+* `SubscriptionCardUpdate`
+* `ExpiringCard`
+* `ComponentAllocationChange`
+* `MeteredUsage`
+* `UpcomingRenewalNotice`
+* `EndOfTrialNotice`
+* `StatementClosed`
+* `StatementSettled`
+* `UpgradeDowngradeSuccess`
+* `UpgradeDowngradeFailure`
+* `RefundSuccess`
+* `RefundFailure`
+* `ExpirationDateChange`
 
 ## Other Considerations
 
 > **NOTE**<br>
-> The current implementation only supports the `SignupSuccess` and `Test` message and its supporting components, such as `Site` and `Subscription`.  
+> The current implementation only supports a subset of the total webhook message types.
 > The `ChargifyMessageFactory` can and should be built out by other contributors as needed, and then issue a PR to merge back into this repo.
 > Eventually, all message types will be supported and the Java community can easily consume Chargify Webhooks.

@@ -14,18 +14,39 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.prowaveconsulting.chargify.webhook.bean;
+package io.prowave.chargify.webhook.bean;
 
-public class Test {
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-	private String chargify;
+public class SignupSuccess {
 
-	public String getChargify() {
-		return chargify;
+	@JsonProperty("event_id")
+	private Long eventId;
+	private Site site;
+	private Subscription subscription;
+
+	public Long getEventId() {
+		return eventId;
 	}
 
-	public void setChargify(String chargify) {
-		this.chargify = chargify;
+	public void setEventId(Long eventId) {
+		this.eventId = eventId;
+	}
+
+	public Subscription getSubscription() {
+		return subscription;
+	}
+
+	public void setSubscription(Subscription subscription) {
+		this.subscription = subscription;
+	}
+
+	public Site getSite() {
+		return site;
+	}
+
+	public void setSite(Site site) {
+		this.site = site;
 	}
 
 }
