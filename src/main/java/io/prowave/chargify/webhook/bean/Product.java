@@ -91,6 +91,9 @@ public class Product {
 	@JsonProperty("update_return_params")
 	private String updateReturnParams;
 
+	@JsonProperty("return_url")
+	private String returnUrl;
+
 	public Long getId() {
 		return id;
 	}
@@ -297,6 +300,14 @@ public class Product {
 
 	public void setUpdateReturnParams(String updateReturnParams) {
 		this.updateReturnParams = updateReturnParams;
+	}
+
+	public String getReturnUrl() {
+		return returnUrl;
+	}
+
+	public void setReturnUrl(String returnUrl) {
+		this.returnUrl = returnUrl;
 	}
 
 }
