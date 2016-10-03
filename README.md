@@ -12,7 +12,7 @@ Stable releases will be published to the central maven repository.
 	<dependency>
 		<groupId>io.prowave</groupId>
 		<artifactId>chargify-webhook-java</artifactId>
-		<version>1.0.2</version>
+		<version>1.0.3</version>
 	</dependency>
 
 ### Snapshots
@@ -85,14 +85,14 @@ Same as above, but you can pass the raw RequestBody as a `String` to the `Chargi
 * `Test`
 * `SignupSuccess`
 * `CusomterUpdate`
+* `PaymentSuccess`
+* `PaymentFailure`
 
 #### Backlog
 
 * `SignupFailure`
 * `RenewalSuccess`
 * `RenewalFailure`
-* `PaymentSuccess`
-* `PaymentFailure`
 * `BillingDateChange`
 * `SubscriptionStateChange`
 * `SubscriptionProductChange`
