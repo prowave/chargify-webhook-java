@@ -82,6 +82,18 @@ public class Transaction {
 	@JsonProperty("product_id")
 	private Long productId;
 
+	@JsonProperty("card_number")
+	private String cardNumber;
+
+	@JsonProperty("card_expiration")
+	private String cardExpiration;
+
+	@JsonProperty("card_type")
+	private String cardType;
+
+	@JsonProperty("invoice_id")
+	private Long invoiceId;
+
 	public Long getId() {
 		return id;
 	}
@@ -264,5 +276,37 @@ public class Transaction {
 
 	public void setProductId(Long productId) {
 		this.productId = productId;
+	}
+
+	public String getCardNumber() {
+		return cardNumber;
+	}
+
+	public void setCardNumber(String cardNumber) {
+		this.cardNumber = cardNumber;
+	}
+
+	public String getCardExpiration() {
+		return cardExpiration;
+	}
+
+	public void setCardExpiration(String cardExpiration) {
+		this.cardExpiration = cardExpiration;
+	}
+
+	public String getCardType() {
+		return cardType;
+	}
+
+	public void setCardType(String cardType) {
+		this.cardType = cardType;
+	}
+
+	public Long getInvoiceId() {
+		return invoiceId;
+	}
+
+	public void setInvoiceId(Long invoiceId) {
+		this.invoiceId = invoiceId;
 	}
 }
