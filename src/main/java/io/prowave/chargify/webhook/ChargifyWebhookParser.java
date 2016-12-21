@@ -44,6 +44,9 @@ public class ChargifyWebhookParser {
 	private static final String EVENT = "event";
 	private static final String PAYLOAD = "payload";
 
+	private ChargifyWebhookParser() {
+	}
+
 	public static final ChargifyWebhook parse(String webhookBody) throws UnsupportedEncodingException {
 
 		Map<String, String> params = new LinkedHashMap<>();
@@ -52,7 +55,7 @@ public class ChargifyWebhookParser {
 
 		for (String pair : pairs) {
 			String[] kv = URLDecoder.decode(pair, "UTF-8").split("=");
-			params.put(kv[0], kv[1]);
+			params.put(kv[0], kv.length > 1 ? kv[1] : "");
 		}
 
 		return parse(params);
