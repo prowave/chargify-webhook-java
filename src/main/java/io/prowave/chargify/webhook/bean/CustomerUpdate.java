@@ -16,8 +16,10 @@
  */
 package io.prowave.chargify.webhook.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class CustomerUpdate {
 
 	@JsonProperty("event_id")

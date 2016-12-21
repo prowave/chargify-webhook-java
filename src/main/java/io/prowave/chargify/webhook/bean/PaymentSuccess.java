@@ -16,5 +16,8 @@
  */
 package io.prowave.chargify.webhook.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class PaymentSuccess extends Payment {
 }

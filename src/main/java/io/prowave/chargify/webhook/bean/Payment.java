@@ -16,16 +16,25 @@
  */
 package io.prowave.chargify.webhook.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Payment {
 
+	@JsonProperty("event_id")
+	private Long eventId;
 	private Subscription subscription;
 	private Site site;
 	private Transaction transaction;
 
-	@JsonProperty("event_id")
-	private Long eventId;
+	public Long getEventId() {
+		return eventId;
+	}
+
+	public void setEventId(Long eventId) {
+		this.eventId = eventId;
+	}
 
 	public Subscription getSubscription() {
 		return subscription;
@@ -49,14 +58,6 @@ public class Payment {
 
 	public void setTransaction(Transaction transaction) {
 		this.transaction = transaction;
-	}
-
-	public Long getEventId() {
-		return eventId;
-	}
-
-	public void setEventId(Long eventId) {
-		this.eventId = eventId;
 	}
 
 }

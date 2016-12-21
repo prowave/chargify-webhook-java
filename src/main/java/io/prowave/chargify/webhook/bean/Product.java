@@ -21,7 +21,7 @@ import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonIgnoreProperties({ "public_signup_pages" })
+@JsonIgnoreProperties(value = { "public_signup_pages" }, ignoreUnknown = true)
 public class Product {
 
 	private Long id;

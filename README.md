@@ -80,6 +80,10 @@ Same as above, but you can pass the raw RequestBody as a `String` to the `Chargi
 
 ### POJO Support
 
+#### Ignored Attributes
+
+Since we had trouble getting a comprehensive list of all the payload attributes, we have added support for the ones we know about and ignored any others.  If there are any attributes that need to be added to the POJOs, please add them and create a PR, or open an Issue.
+
 #### Provided
 
 * `Test`
