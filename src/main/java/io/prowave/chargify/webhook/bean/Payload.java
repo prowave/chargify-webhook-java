@@ -17,18 +17,44 @@
 package io.prowave.chargify.webhook.bean;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+/**
+ * Generic Chargify Payload
+ * 
+ * @author jake pharr
+ *
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Payment extends Payload {
+public class Payload {
 
-	private Transaction transaction;
+	@JsonProperty("event_id")
+	private Long eventId;
+	private Subscription subscription;
+	private Site site;
 
-	public Transaction getTransaction() {
-		return transaction;
+	public Long getEventId() {
+		return eventId;
 	}
 
-	public void setTransaction(Transaction transaction) {
-		this.transaction = transaction;
+	public void setEventId(Long eventId) {
+		this.eventId = eventId;
+	}
+
+	public Subscription getSubscription() {
+		return subscription;
+	}
+
+	public void setSubscription(Subscription subscription) {
+		this.subscription = subscription;
+	}
+
+	public Site getSite() {
+		return site;
+	}
+
+	public void setSite(Site site) {
+		this.site = site;
 	}
 
 }

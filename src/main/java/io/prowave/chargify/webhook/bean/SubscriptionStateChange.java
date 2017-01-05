@@ -19,16 +19,5 @@ package io.prowave.chargify.webhook.bean;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Payment extends Payload {
-
-	private Transaction transaction;
-
-	public Transaction getTransaction() {
-		return transaction;
-	}
-
-	public void setTransaction(Transaction transaction) {
-		this.transaction = transaction;
-	}
-
+public class SubscriptionStateChange extends Payload {
 }

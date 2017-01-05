@@ -91,6 +91,7 @@ Since we had trouble getting a comprehensive list of all the payload attributes,
 * `CustomerUpdate`
 * `PaymentSuccess`
 * `PaymentFailure`
+* `SubscriptionStateChange`
 
 #### Backlog
 
@@ -98,7 +99,6 @@ Since we had trouble getting a comprehensive list of all the payload attributes,
 * `RenewalSuccess`
 * `RenewalFailure`
 * `BillingDateChange`
-* `SubscriptionStateChange`
 * `SubscriptionProductChange`
 * `SubscriptionCardUpdate`
 * `ExpiringCard`
