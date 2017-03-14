@@ -17,7 +17,21 @@
 package io.prowave.chargify.webhook.bean;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UpgradeDownGradeSuccess extends Payload {
+	
+	@JsonProperty("previous_product")
+	private Product previousProduct;
+
+	public Product getPreviousProduct() {
+		return previousProduct;
+	}
+
+	public void setPreviousProduct(Product previousProduct) {
+		this.previousProduct = previousProduct;
+	}
+	
+	
 }

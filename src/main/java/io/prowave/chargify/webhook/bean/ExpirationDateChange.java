@@ -16,8 +16,22 @@
  */
 package io.prowave.chargify.webhook.bean;
 
+import java.util.Date;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ExpirationDateChange extends Payload {
+	
+	@JsonProperty("previous_expires_at")
+	private Date previousExpiresAt;
+
+	public Date getPreviousExpiresAt() {
+		return previousExpiresAt;
+	}
+
+	public void setPreviousExpiresAt(Date previousExpiresAt) {
+		this.previousExpiresAt = previousExpiresAt;
+	}
 }
