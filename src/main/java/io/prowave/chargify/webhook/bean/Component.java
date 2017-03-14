@@ -19,25 +19,37 @@ package io.prowave.chargify.webhook.bean;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class CustomerUpdate extends Payload{
+@JsonIgnoreProperties(value = { "public_signup_pages" }, ignoreUnknown = true)
+public class Component {
 
-	private Customer customer;
+	private Long id;
+	private String name;
 
-	public Subscription getSubscription() {
-		return null;
+	@JsonProperty("unit_name")
+	private String unitName;
+
+	public Long getId() {
+		return id;
 	}
 
-	public void setSubscription(Subscription subscription) {
-		throw new UnsupportedOperationException("There is no subscription allowed in CustomerUpdate");
+	public void setId(Long id) {
+		this.id = id;
 	}
 
-	public Customer getCustomer() {
-		return customer;
+	public String getName() {
+		return name;
 	}
 
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getUnitName() {
+		return unitName;
+	}
+
+	public void setUnitName(String unitName) {
+		this.unitName = unitName;
 	}
 
 }

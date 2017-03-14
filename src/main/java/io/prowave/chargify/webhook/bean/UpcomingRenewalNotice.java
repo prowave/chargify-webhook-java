@@ -16,28 +16,14 @@
  */
 package io.prowave.chargify.webhook.bean;
 
+
+
+import java.util.Date;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class CustomerUpdate extends Payload{
-
-	private Customer customer;
-
-	public Subscription getSubscription() {
-		return null;
-	}
-
-	public void setSubscription(Subscription subscription) {
-		throw new UnsupportedOperationException("There is no subscription allowed in CustomerUpdate");
-	}
-
-	public Customer getCustomer() {
-		return customer;
-	}
-
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
-	}
-
+public class UpcomingRenewalNotice extends Notice {
+	
 }

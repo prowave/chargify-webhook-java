@@ -20,24 +20,37 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class CustomerUpdate extends Payload{
+public class DunningStepReached extends Payload {
+	
+	private Dunner dunner;
+	
+	@JsonProperty("current_step")
+	private CurrentStep currentStep;
+	
+	@JsonProperty("next_step")
+	private NextStep nextStep;
 
-	private Customer customer;
-
-	public Subscription getSubscription() {
-		return null;
+	public Dunner getDunner() {
+		return dunner;
 	}
 
-	public void setSubscription(Subscription subscription) {
-		throw new UnsupportedOperationException("There is no subscription allowed in CustomerUpdate");
+	public void setDunner(Dunner dunner) {
+		this.dunner = dunner;
 	}
 
-	public Customer getCustomer() {
-		return customer;
+	public CurrentStep getCurrentStep() {
+		return currentStep;
 	}
 
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
+	public void setCurrentStep(CurrentStep currentStep) {
+		this.currentStep = currentStep;
 	}
 
+	public NextStep getNextStep() {
+		return nextStep;
+	}
+
+	public void setNextStep(NextStep nextStep) {
+		this.nextStep = nextStep;
+	}
 }
