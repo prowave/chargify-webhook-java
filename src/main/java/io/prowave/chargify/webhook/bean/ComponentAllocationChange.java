@@ -18,6 +18,7 @@ package io.prowave.chargify.webhook.bean;
 
 
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -32,7 +33,7 @@ public class ComponentAllocationChange extends Payload {
 	
 	private String memo;
 	
-	private Date timestamp;
+	private String timestamp;
 	
 	@JsonProperty("previous_allocation")
 	private int previousAllocation;
@@ -65,11 +66,11 @@ public class ComponentAllocationChange extends Payload {
 		this.memo = memo;
 	}
 
-	public Date getTimestamp() {
+	public String getTimestamp() {
 		return timestamp;
 	}
 
-	public void setTimestamp(Date timestamp) {
+	public void setTimestamp(String timestamp) {
 		this.timestamp = timestamp;
 	}
 
