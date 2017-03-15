@@ -24,6 +24,14 @@ public class SubscriptionProductChange extends Payload {
 	
 	@JsonProperty("previous_product")
 	private Product previousProduct;
+
+	public Product getPreviousProduct() {
+		return previousProduct;
+	}
+
+	public void setPreviousProduct(Product previousProduct) {
+		this.previousProduct = previousProduct;
+	}
 	
 	
 }
