@@ -50,8 +50,8 @@ public class ChargifyConvertProcessorTest {
 		ComponentAllocationChange c = (ComponentAllocationChange) process("./src/test/resources/samples/webhook_comp_alloc_change.txt", ChargifyEvent.COMPONENT_ALLOCATION_CHANGE);
 		
 		assertNotNull(c);
-		assertEquals(3, c.getNewAllocation());
-		assertEquals(0, c.getPreviousAllocation());
+		assertEquals(Integer.valueOf(3), c.getNewAllocation());
+		assertEquals(Integer.valueOf(0), c.getPreviousAllocation());
 
 	}
 	
@@ -78,8 +78,8 @@ public class ChargifyConvertProcessorTest {
 		DunningStepReached c = (DunningStepReached) process("./src/test/resources/samples/webhook_dunning_step_reached.txt", ChargifyEvent.DUNNING_STEP_REACHED);
 		
 		assertNotNull(c);
-		assertEquals(1, c.getCurrentStep().getDayThreshold());
-		assertEquals(2, c.getNextStep().getDayThreshold());
+		assertEquals(Integer.valueOf(1), c.getCurrentStep().getDayThreshold());
+		assertEquals(Integer.valueOf(2), c.getNextStep().getDayThreshold());
 		assertEquals("2016-12-20 06:55:55",DateFormatUtils.formatUTC(c.getDunner().getLastAttemptedAt(), "yyyy-MM-dd hh:mm:ss"));
 
 	}
@@ -165,7 +165,7 @@ public class ChargifyConvertProcessorTest {
 		assertNotNull(c);
 		assertEquals("john@example.com",c.getCustomer().getEmail());
 		assertEquals("Jane",c.getPaymentProfile().getFirstName());
-		assertEquals(200,c.getEstimatedRenewalAmountInCents());
+		assertEquals(Integer.valueOf(200),c.getEstimatedRenewalAmountInCents());
 		assertEquals("End of trial notice sent",c.getMessage());
 		assertEquals("Pro",c.getProduct().getName());
 		assertEquals("active",c.getSubscription().getState());
@@ -179,7 +179,7 @@ public class ChargifyConvertProcessorTest {
 		assertNotNull(c);
 		assertEquals("john@example.com",c.getCustomer().getEmail());
 		assertEquals("Jane",c.getPaymentProfile().getFirstName());
-		assertEquals(100,c.getEstimatedRenewalAmountInCents());
+		assertEquals(Integer.valueOf(100),c.getEstimatedRenewalAmountInCents());
 		assertEquals("Upcoming renewal notice sent",c.getMessage());
 		assertEquals("Pro",c.getProduct().getName());
 		assertEquals("active",c.getSubscription().getState());
