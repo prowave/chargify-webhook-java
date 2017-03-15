@@ -25,14 +25,5 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class BillingDateChange extends Payload {
 	
 	
-	@JsonProperty("previous_billing_date")
-	private Date previousBillingDate;
-
-	public Date getPreviousBillingDate() {
-		return previousBillingDate;
-	}
-
-	public void setPreviousBillingDate(Date previousBillingDate) {
-		this.previousBillingDate = previousBillingDate;
-	}
+	
 }
