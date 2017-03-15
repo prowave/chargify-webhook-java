@@ -92,27 +92,29 @@ Since we had trouble getting a comprehensive list of all the payload attributes,
 * `PaymentSuccess`
 * `PaymentFailure`
 * `SubscriptionStateChange`
-
-#### Backlog
-
 * `SignupFailure`
 * `RenewalSuccess`
 * `RenewalFailure`
 * `BillingDateChange`
 * `SubscriptionProductChange`
-* `SubscriptionCardUpdate`
 * `ExpiringCard`
 * `ComponentAllocationChange`
-* `MeteredUsage`
 * `UpcomingRenewalNotice`
-* `EndOfTrialNotice`
-* `StatementClosed`
-* `StatementSettled`
+* `EndOfTrialNotice` - possible duplicate, or superceded by `TrialEndNotice`
+* `TrialEndNotice`
 * `UpgradeDowngradeSuccess`
 * `UpgradeDowngradeFailure`
+* `ExpirationDateChange`
+
+#### Backlog
+
+* `SubscriptionCardUpdate`
+* `MeteredUsage`
+* `StatementClosed`
+* `StatementSettled`
 * `RefundSuccess`
 * `RefundFailure`
-* `ExpirationDateChange`
+
 
 ## Other Considerations
 

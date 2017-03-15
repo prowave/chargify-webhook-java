@@ -25,10 +25,10 @@ public class Notice extends Payload {
 	private Customer customer;
 	
 	@JsonProperty("email_sent")
-	private boolean emailSent;
+	private Boolean emailSent;
 	
 	@JsonProperty("estimated_renewal_amount_in_cents")
-	private int estimatedRenewalAmountInCents;
+	private Integer estimatedRenewalAmountInCents;
 	
 	private String message;
 	
@@ -45,19 +45,19 @@ public class Notice extends Payload {
 		this.customer = customer;
 	}
 
-	public boolean isEmailSent() {
+	public Boolean isEmailSent() {
 		return emailSent;
 	}
 
-	public void setEmailSent(boolean emailSent) {
+	public void setEmailSent(Boolean emailSent) {
 		this.emailSent = emailSent;
 	}
 
-	public int getEstimatedRenewalAmountInCents() {
+	public Integer getEstimatedRenewalAmountInCents() {
 		return estimatedRenewalAmountInCents;
 	}
 
-	public void setEstimatedRenewalAmountInCents(int estimatedRenewalAmountInCents) {
+	public void setEstimatedRenewalAmountInCents(Integer estimatedRenewalAmountInCents) {
 		this.estimatedRenewalAmountInCents = estimatedRenewalAmountInCents;
 	}
 

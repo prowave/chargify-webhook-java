@@ -39,10 +39,10 @@ public class ComponentAllocationChange extends Payload {
 	private Date timestamp;
 	
 	@JsonProperty("previous_allocation")
-	private int previousAllocation;
+	private Integer previousAllocation;
 	
 	@JsonProperty("new_allocation")
-	private int newAllocation;
+	private Integer newAllocation;
 	
 
 	public Component getComponent() {
@@ -77,19 +77,19 @@ public class ComponentAllocationChange extends Payload {
 		this.timestamp = timestamp;
 	}
 
-	public int getPreviousAllocation() {
+	public Integer getPreviousAllocation() {
 		return previousAllocation;
 	}
 
-	public void setPreviousAllocation(int previousAllocation) {
+	public void setPreviousAllocation(Integer previousAllocation) {
 		this.previousAllocation = previousAllocation;
 	}
 
-	public int getNewAllocation() {
+	public Integer getNewAllocation() {
 		return newAllocation;
 	}
 
-	public void setNewAllocation(int newAllocation) {
+	public void setNewAllocation(Integer newAllocation) {
 		this.newAllocation = newAllocation;
 	}
 

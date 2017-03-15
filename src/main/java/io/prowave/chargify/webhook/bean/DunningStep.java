@@ -23,7 +23,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class DunningStep {
 
 	@JsonProperty("day_threshold")
-	private int dayThreshold;
+	private Integer dayThreshold;
 
 	private String action;
 
@@ -34,22 +34,22 @@ public class DunningStep {
 	private String emailSubject;
 
 	@JsonProperty("send_email")
-	private boolean sendEmail;
+	private Boolean sendEmail;
 	
 	@JsonProperty("send_bcc_email")
-	private boolean sendBccEmail;
+	private Boolean sendBccEmail;
 	
 	@JsonProperty("send_sms")
-	private boolean sendSms;
+	private Boolean sendSms;
 	
 	@JsonProperty("sms_body")
 	private String smsBody;
 
-	public int getDayThreshold() {
+	public Integer getDayThreshold() {
 		return dayThreshold;
 	}
 
-	public void setDayThreshold(int dayThreshold) {
+	public void setDayThreshold(Integer dayThreshold) {
 		this.dayThreshold = dayThreshold;
 	}
 
@@ -77,27 +77,27 @@ public class DunningStep {
 		this.emailSubject = emailSubject;
 	}
 
-	public boolean isSendEmail() {
+	public Boolean isSendEmail() {
 		return sendEmail;
 	}
 
-	public void setSendEmail(boolean sendEmail) {
+	public void setSendEmail(Boolean sendEmail) {
 		this.sendEmail = sendEmail;
 	}
 
-	public boolean isSendBccEmail() {
+	public Boolean isSendBccEmail() {
 		return sendBccEmail;
 	}
 
-	public void setSendBccEmail(boolean sendBccEmail) {
+	public void setSendBccEmail(Boolean sendBccEmail) {
 		this.sendBccEmail = sendBccEmail;
 	}
 
-	public boolean isSendSms() {
+	public Boolean isSendSms() {
 		return sendSms;
 	}
 
-	public void setSendSms(boolean sendSms) {
+	public void setSendSms(Boolean sendSms) {
 		this.sendSms = sendSms;
 	}
 

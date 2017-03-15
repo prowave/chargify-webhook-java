@@ -30,7 +30,7 @@ public class Dunner {
 
 	private String state;
 
-	private int attempts;
+	private Integer attempts;
 
 	//2016-12-21T19:55:55Z
 	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd'T'HH:mm:ss'Z'")
@@ -61,11 +61,11 @@ public class Dunner {
 		this.state = state;
 	}
 
-	public int getAttempts() {
+	public Integer getAttempts() {
 		return attempts;
 	}
 
-	public void setAttempts(int attempts) {
+	public void setAttempts(Integer attempts) {
 		this.attempts = attempts;
 	}
 
