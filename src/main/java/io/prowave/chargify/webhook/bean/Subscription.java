@@ -113,6 +113,14 @@ public class Subscription {
 	@JsonProperty("product_version_number")
 	private Integer productVersionNumber;
 
+	@JsonProperty("previous_expires_at")
+	private Date previousExpiresAt;
+
+	@JsonProperty("previous_billing_date")
+	private Date previousBillingDate;
+
+	
+	
 	public Long getId() {
 		return id;
 	}
@@ -321,6 +329,13 @@ public class Subscription {
 		this.previousState = previousState;
 	}
 
+	public Date getPreviousExpiresAt() {
+		return previousExpiresAt;
+	}
+
+	public void setPreviousExpiresAt(Date previousExpiresAt) {
+		this.previousExpiresAt = previousExpiresAt;
+	}
 	public String getCouponCode() {
 		return couponCode;
 	}
@@ -367,6 +382,14 @@ public class Subscription {
 
 	public void setProductVersionNumber(Integer productVersionNumber) {
 		this.productVersionNumber = productVersionNumber;
+	}
+	
+	public Date getPreviousBillingDate() {
+		return previousBillingDate;
+	}
+
+	public void setPreviousBillingDate(Date previousBillingDate) {
+		this.previousBillingDate = previousBillingDate;
 	}
 
 }

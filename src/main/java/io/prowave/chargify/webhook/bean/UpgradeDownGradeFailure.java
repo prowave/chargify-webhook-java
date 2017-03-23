@@ -20,24 +20,16 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class CustomerUpdate extends Payload{
+public class UpgradeDownGradeFailure extends Payload {
+	
+	@JsonProperty("target_product")
+	private Product targetProduct;
 
-	private Customer customer;
-
-	public Subscription getSubscription() {
-		return null;
+	public Product getTargetProduct() {
+		return targetProduct;
 	}
 
-	public void setSubscription(Subscription subscription) {
-		throw new UnsupportedOperationException("There is no subscription allowed in CustomerUpdate");
+	public void setTargetProduct(Product targetProduct) {
+		this.targetProduct = targetProduct;
 	}
-
-	public Customer getCustomer() {
-		return customer;
-	}
-
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
-	}
-
 }
