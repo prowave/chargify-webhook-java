@@ -46,7 +46,7 @@ public class Transaction {
 	private Long gatewayOrderId;
 
 	@JsonProperty("gateway_transaction_id")
-	private Long gatewayTransactionId;
+	private String gatewayTransactionId;
 
 	@JsonProperty("starting_balance_in_cents")
 	private Long startingBalanceInCents;
@@ -176,11 +176,11 @@ public class Transaction {
 		this.gatewayOrderId = gatewayOrderId;
 	}
 
-	public Long getGatewayTransactionId() {
+	public String getGatewayTransactionId() {
 		return gatewayTransactionId;
 	}
 
-	public void setGatewayTransactionId(Long gatewayTransactionId) {
+	public void setGatewayTransactionId(String gatewayTransactionId) {
 		this.gatewayTransactionId = gatewayTransactionId;
 	}
 
