@@ -18,7 +18,6 @@ package io.prowave.chargify.webhook.bean;
 
 import java.util.Date;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -32,13 +31,9 @@ public class Dunner {
 
 	private Integer attempts;
 
-	//2016-12-21T19:55:55Z
-	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd'T'HH:mm:ss'Z'")
 	@JsonProperty("last_attempted_at")
 	private Date lastAttemptedAt;
 
-	//2016-12-21T19:55:55Z
-	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd'T'HH:mm:ss'Z'")
 	@JsonProperty("created_at")
 	private Date createdAt;
 
