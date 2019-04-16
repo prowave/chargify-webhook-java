@@ -94,6 +94,12 @@ public class Product {
 	@JsonProperty("return_url")
 	private String returnUrl;
 
+	@JsonProperty("product_family_id")
+	private String productFamilyId;
+
+	@JsonProperty("product_family_name")
+	private String productFamilyName;
+
 	public Long getId() {
 		return id;
 	}
@@ -310,15 +316,29 @@ public class Product {
 		this.returnUrl = returnUrl;
 	}
 
+	public String getProductFamilyId() {
+		return productFamilyId;
+	}
+
+	public void setProductFamilyId(String productFamilyId) {
+		this.productFamilyId = productFamilyId;
+	}
+
+	public String getProductFamilyName() {
+		return productFamilyName;
+	}
+
+	public void setProductFamilyName(String productFamilyName) {
+		this.productFamilyName = productFamilyName;
+	}
+
 }
 
 /*
  * Intentionally left out
  * 
-   "public_signup_pages": {
-	    "return_params": "subscription_id={subscription_id}&customer_id={customer_id}&customer_reference={customer_reference}",
-	    "return_url": "",
-	    "id": "272069",
-	    "url": "http://brightmove-inc-sandbox.chargify.com/subscribe/pphbjwhcrcjr/cm-v1-0-0"
-	  },
+ * "public_signup_pages": { "return_params":
+ * "subscription_id={subscription_id}&customer_id={customer_id}&customer_reference={customer_reference}",
+ * "return_url": "", "id": "272069", "url":
+ * "http://brightmove-inc-sandbox.chargify.com/subscribe/pphbjwhcrcjr/cm-v1-0-0" },
  */
