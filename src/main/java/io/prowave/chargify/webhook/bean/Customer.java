@@ -64,6 +64,12 @@ public class Customer {
 	@JsonProperty("portal_invite_last_sent_at")
 	private Date portalInviteLastSentAt;
 
+	@JsonProperty("vat_number")
+	private String vatNumber;
+
+	@JsonProperty("tax_exempt")
+	private Boolean taxExempt;
+
 	public Long getId() {
 		return id;
 	}
@@ -222,6 +228,22 @@ public class Customer {
 
 	public void setPortalInviteLastSentAt(Date portalInviteLastSentAt) {
 		this.portalInviteLastSentAt = portalInviteLastSentAt;
+	}
+
+	public String getVatNumber() {
+		return vatNumber;
+	}
+
+	public void setVatNumber(String vatNumber) {
+		this.vatNumber = vatNumber;
+	}
+
+	public Boolean getTaxExempt() {
+		return taxExempt;
+	}
+
+	public void setTaxExempt(Boolean taxExempt) {
+		this.taxExempt = taxExempt;
 	}
 
 }
