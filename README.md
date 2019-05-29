@@ -12,7 +12,7 @@ Stable releases will be published to the central maven repository.
 	<dependency>
 		<groupId>io.prowave</groupId>
 		<artifactId>chargify-webhook-java</artifactId>
-		<version>1.1.4</version>
+		<version>1.1.5</version>
 	</dependency>
 
 ### Snapshots
