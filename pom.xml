@@ -58,7 +58,7 @@
     <jackson>2.9.10.7</jackson>
     <junit>4.13.1</junit>
     <commons-lang3>3.8.1</commons-lang3>
-    <commons-io>2.6</commons-io>
+    <commons-io>2.7</commons-io>
   </properties>
 
   <distributionManagement>
