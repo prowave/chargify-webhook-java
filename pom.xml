@@ -55,7 +55,7 @@
     <maven-gpg-plugin>1.6</maven-gpg-plugin>
     <nexus-staging-maven-plugin>1.6.8</nexus-staging-maven-plugin>
     <slf4j>1.7.26</slf4j>
-    <jackson>2.9.10.7</jackson>
+    <jackson>2.13.4.1</jackson>
     <junit>4.13.1</junit>
     <commons-lang3>3.8.1</commons-lang3>
     <commons-io>2.6</commons-io>
