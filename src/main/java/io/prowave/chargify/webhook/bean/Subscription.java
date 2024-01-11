@@ -87,6 +87,9 @@ public class Subscription {
 	@JsonProperty("product_price_in_cents")
 	private Long productPriceInCents;
 
+	@JsonProperty("product_price_point_id")
+	private Long productPricePointId;
+
 	@JsonProperty("signup_payment_id")
 	private Long signupPaymentId;
 
@@ -304,6 +307,14 @@ public class Subscription {
 
 	public void setProductPriceInCents(Long productPriceInCents) {
 		this.productPriceInCents = productPriceInCents;
+	}
+
+	public Long getProductPricePointId() {
+		return productPricePointId;
+	}
+
+	public void setProductPricePointId(Long productPricePointId) {
+		this.productPricePointId = productPricePointId;
 	}
 
 	public Long getSignupPaymentId() {
