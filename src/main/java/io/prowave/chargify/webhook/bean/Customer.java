@@ -17,10 +17,10 @@
  */
 package io.prowave.chargify.webhook.bean;
 
-import java.util.Date;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.time.OffsetDateTime;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Customer {
@@ -51,19 +51,19 @@ public class Customer {
 	private String lastName;
 
 	@JsonProperty("created_at")
-	private Date createdAt;
+	private OffsetDateTime createdAt;
 
 	@JsonProperty("updated_at")
-	private Date updatedAt;
+	private OffsetDateTime updatedAt;
 
 	@JsonProperty("portal_invite_last_accepted_at")
-	private Date portalInviteLastAcceptedAt;
+	private OffsetDateTime portalInviteLastAcceptedAt;
 
 	@JsonProperty("portal_customer_created_at")
-	private Date portalCustomerCreatedAt;
+	private OffsetDateTime portalCustomerCreatedAt;
 
 	@JsonProperty("portal_invite_last_sent_at")
-	private Date portalInviteLastSentAt;
+	private OffsetDateTime portalInviteLastSentAt;
 
 	@JsonProperty("vat_number")
 	private String vatNumber;
@@ -191,43 +191,43 @@ public class Customer {
 		this.ccEmails = ccEmails;
 	}
 
-	public Date getCreatedAt() {
+	public OffsetDateTime getCreatedAt() {
 		return createdAt;
 	}
 
-	public void setCreatedAt(Date createdAt) {
+	public void setCreatedAt(OffsetDateTime createdAt) {
 		this.createdAt = createdAt;
 	}
 
-	public Date getUpdatedAt() {
+	public OffsetDateTime getUpdatedAt() {
 		return updatedAt;
 	}
 
-	public void setUpdatedAt(Date updatedAt) {
+	public void setUpdatedAt(OffsetDateTime updatedAt) {
 		this.updatedAt = updatedAt;
 	}
 
-	public Date getPortalInviteLastAcceptedAt() {
+	public OffsetDateTime getPortalInviteLastAcceptedAt() {
 		return portalInviteLastAcceptedAt;
 	}
 
-	public void setPortalInviteLastAcceptedAt(Date portalInviteLastAcceptedAt) {
+	public void setPortalInviteLastAcceptedAt(OffsetDateTime portalInviteLastAcceptedAt) {
 		this.portalInviteLastAcceptedAt = portalInviteLastAcceptedAt;
 	}
 
-	public Date getPortalCustomerCreatedAt() {
+	public OffsetDateTime getPortalCustomerCreatedAt() {
 		return portalCustomerCreatedAt;
 	}
 
-	public void setPortalCustomerCreatedAt(Date portalCustomerCreatedAt) {
+	public void setPortalCustomerCreatedAt(OffsetDateTime portalCustomerCreatedAt) {
 		this.portalCustomerCreatedAt = portalCustomerCreatedAt;
 	}
 
-	public Date getPortalInviteLastSentAt() {
+	public OffsetDateTime getPortalInviteLastSentAt() {
 		return portalInviteLastSentAt;
 	}
 
-	public void setPortalInviteLastSentAt(Date portalInviteLastSentAt) {
+	public void setPortalInviteLastSentAt(OffsetDateTime portalInviteLastSentAt) {
 		this.portalInviteLastSentAt = portalInviteLastSentAt;
 	}
 

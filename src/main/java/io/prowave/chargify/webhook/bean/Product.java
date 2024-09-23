@@ -17,10 +17,10 @@
  */
 package io.prowave.chargify.webhook.bean;
 
-import java.util.Date;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.time.OffsetDateTime;
 
 @JsonIgnoreProperties(value = { "public_signup_pages" }, ignoreUnknown = true)
 public class Product {
@@ -51,13 +51,13 @@ public class Product {
   private String expirationIntervalUnit;
 
   @JsonProperty("created_at")
-  private Date createdAt;
+  private OffsetDateTime createdAt;
 
   @JsonProperty("updated_at")
-  private Date updatedAt;
+  private OffsetDateTime updatedAt;
 
   @JsonProperty("archived_at")
-  private Date archivedAt;
+  private OffsetDateTime archivedAt;
 
   @JsonProperty("return_params")
   private String returnParams;
@@ -197,27 +197,27 @@ public class Product {
     this.expirationIntervalUnit = expirationIntervalUnit;
   }
 
-  public Date getCreatedAt() {
+  public OffsetDateTime getCreatedAt() {
     return createdAt;
   }
 
-  public void setCreatedAt(Date createdAt) {
+  public void setCreatedAt(OffsetDateTime createdAt) {
     this.createdAt = createdAt;
   }
 
-  public Date getUpdatedAt() {
+  public OffsetDateTime getUpdatedAt() {
     return updatedAt;
   }
 
-  public void setUpdatedAt(Date updatedAt) {
+  public void setUpdatedAt(OffsetDateTime updatedAt) {
     this.updatedAt = updatedAt;
   }
 
-  public Date getArchivedAt() {
+  public OffsetDateTime getArchivedAt() {
     return archivedAt;
   }
 
-  public void setArchivedAt(Date archivedAt) {
+  public void setArchivedAt(OffsetDateTime archivedAt) {
     this.archivedAt = archivedAt;
   }
 

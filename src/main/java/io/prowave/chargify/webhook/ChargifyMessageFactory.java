@@ -18,9 +18,12 @@
 package io.prowave.chargify.webhook;
 
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+import java.time.OffsetDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Map;
+
+import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,21 +34,27 @@ public class ChargifyMessageFactory {
 
 	private static final Logger LOG = LoggerFactory.getLogger(ChargifyMessageFactory.class);
 
-	private static final ObjectMapper objectMapper = new ObjectMapper();
+	private static final DateTimeFormatter CHARGIFY_DATE_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss Z");
 
-	public static final <T> T createChargifyMessage(Map<String, Object> map, Class<T> clazz) {
+	private static ObjectMapper createObjectMapper() {
+		ObjectMapper objectMapper = new ObjectMapper();
 
-		DateFormat chargifyDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z");
-		objectMapper.setDateFormat(chargifyDateFormat);
+		objectMapper.registerModule(new JavaTimeModule()
+				.addDeserializer(OffsetDateTime.class, new OffsetDateTimeDeserializer(CHARGIFY_DATE_FORMATTER)));
 
+		objectMapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+
+		return objectMapper;
+	}
+
+	public static <T> T createChargifyMessage(Map<String, Object> map, Class<T> clazz) {
+		ObjectMapper objectMapper = createObjectMapper();
 		try {
 			return objectMapper.readValue(objectMapper.writeValueAsString(map), clazz);
 		} catch (IOException e) {
 			LOG.error("Error", e);
-			throw new IllegalArgumentException(String.format("Failed to convert map to message type [%s]", clazz.getName()),
-					e);
+			throw new IllegalArgumentException(String.format("Failed to convert map to message type [%s]", clazz.getName()), e);
 		}
-
 	}
 
 }

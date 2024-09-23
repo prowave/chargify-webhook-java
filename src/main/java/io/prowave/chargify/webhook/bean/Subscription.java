@@ -17,7 +17,7 @@
  */
 package io.prowave.chargify.webhook.bean;
 
-import java.util.Date;
+import java.time.OffsetDateTime;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -37,37 +37,37 @@ public class Subscription {
 	private Long balanceInCents;
 
 	@JsonProperty("activated_at")
-	private Date activatedAt;
+	private OffsetDateTime activatedAt;
 
 	@JsonProperty("trial_started_at")
-	private Date trialStartedAt;
+	private OffsetDateTime trialStartedAt;
 
 	@JsonProperty("trial_ended_at")
-	private Date trialEndedAt;
+	private OffsetDateTime trialEndedAt;
 
 	@JsonProperty("expires_at")
-	private Date expiresAt;
+	private OffsetDateTime expiresAt;
 
 	@JsonProperty("canceled_at")
-	private Date cancelledAt;
+	private OffsetDateTime cancelledAt;
 
 	@JsonProperty("delayed_cancel_at")
-	private Date delayedCancelAt;
+	private OffsetDateTime delayedCancelAt;
 
 	@JsonProperty("created_at")
-	private Date createdAt;
+	private OffsetDateTime createdAt;
 
 	@JsonProperty("updated_at")
-	private Date updatedAt;
+	private OffsetDateTime updatedAt;
 
 	@JsonProperty("next_assessment_at")
-	private Date nextAssessmentAt;
+	private OffsetDateTime nextAssessmentAt;
 
 	@JsonProperty("current_period_started_at")
-	private Date currentPeriodStartedAt;
+	private OffsetDateTime currentPeriodStartedAt;
 
 	@JsonProperty("current_period_ends_at")
-	private Date currentPeriodEndsAt;
+	private OffsetDateTime currentPeriodEndsAt;
 
 	@JsonProperty("payment_collection_method")
 	private String paymentCollectionMethod;
@@ -115,13 +115,13 @@ public class Subscription {
 	private Integer productVersionNumber;
 
 	@JsonProperty("previous_expires_at")
-	private Date previousExpiresAt;
+	private OffsetDateTime previousExpiresAt;
 
 	@JsonProperty("previous_billing_date")
-	private Date previousBillingDate;
+	private OffsetDateTime previousBillingDate;
 
-	
-	
+
+
 	public Long getId() {
 		return id;
 	}
@@ -170,91 +170,91 @@ public class Subscription {
 		this.balanceInCents = balanceInCents;
 	}
 
-	public Date getActivatedAt() {
+	public OffsetDateTime getActivatedAt() {
 		return activatedAt;
 	}
 
-	public void setActivatedAt(Date activatedAt) {
+	public void setActivatedAt(OffsetDateTime activatedAt) {
 		this.activatedAt = activatedAt;
 	}
 
-	public Date getTrialStartedAt() {
+	public OffsetDateTime getTrialStartedAt() {
 		return trialStartedAt;
 	}
 
-	public void setTrialStartedAt(Date trialStartedAt) {
+	public void setTrialStartedAt(OffsetDateTime trialStartedAt) {
 		this.trialStartedAt = trialStartedAt;
 	}
 
-	public Date getTrialEndedAt() {
+	public OffsetDateTime getTrialEndedAt() {
 		return trialEndedAt;
 	}
 
-	public void setTrialEndedAt(Date trialEndedAt) {
+	public void setTrialEndedAt(OffsetDateTime trialEndedAt) {
 		this.trialEndedAt = trialEndedAt;
 	}
 
-	public Date getExpiresAt() {
+	public OffsetDateTime getExpiresAt() {
 		return expiresAt;
 	}
 
-	public void setExpiresAt(Date expiresAt) {
+	public void setExpiresAt(OffsetDateTime expiresAt) {
 		this.expiresAt = expiresAt;
 	}
 
-	public Date getCancelledAt() {
+	public OffsetDateTime getCancelledAt() {
 		return cancelledAt;
 	}
 
-	public void setCancelledAt(Date cancelledAt) {
+	public void setCancelledAt(OffsetDateTime cancelledAt) {
 		this.cancelledAt = cancelledAt;
 	}
 
-	public Date getDelayedCancelAt() {
+	public OffsetDateTime getDelayedCancelAt() {
 		return delayedCancelAt;
 	}
 
-	public void setDelayedCancelAt(Date delayedCancelAt) {
+	public void setDelayedCancelAt(OffsetDateTime delayedCancelAt) {
 		this.delayedCancelAt = delayedCancelAt;
 	}
 
-	public Date getCreatedAt() {
+	public OffsetDateTime getCreatedAt() {
 		return createdAt;
 	}
 
-	public void setCreatedAt(Date createdAt) {
+	public void setCreatedAt(OffsetDateTime createdAt) {
 		this.createdAt = createdAt;
 	}
 
-	public Date getUpdatedAt() {
+	public OffsetDateTime getUpdatedAt() {
 		return updatedAt;
 	}
 
-	public void setUpdatedAt(Date updatedAt) {
+	public void setUpdatedAt(OffsetDateTime updatedAt) {
 		this.updatedAt = updatedAt;
 	}
 
-	public Date getNextAssessmentAt() {
+	public OffsetDateTime getNextAssessmentAt() {
 		return nextAssessmentAt;
 	}
 
-	public void setNextAssessmentAt(Date nextAssessmentAt) {
+	public void setNextAssessmentAt(OffsetDateTime nextAssessmentAt) {
 		this.nextAssessmentAt = nextAssessmentAt;
 	}
 
-	public Date getCurrentPeriodStartedAt() {
+	public OffsetDateTime getCurrentPeriodStartedAt() {
 		return currentPeriodStartedAt;
 	}
 
-	public void setCurrentPeriodStartedAt(Date currentPeriodStartedAt) {
+	public void setCurrentPeriodStartedAt(OffsetDateTime currentPeriodStartedAt) {
 		this.currentPeriodStartedAt = currentPeriodStartedAt;
 	}
 
-	public Date getCurrentPeriodEndsAt() {
+	public OffsetDateTime getCurrentPeriodEndsAt() {
 		return currentPeriodEndsAt;
 	}
 
-	public void setCurrentPeriodEndsAt(Date currentPeriodEndsAt) {
+	public void setCurrentPeriodEndsAt(OffsetDateTime currentPeriodEndsAt) {
 		this.currentPeriodEndsAt = currentPeriodEndsAt;
 	}
 
@@ -330,11 +330,11 @@ public class Subscription {
 		this.previousState = previousState;
 	}
 
-	public Date getPreviousExpiresAt() {
+	public OffsetDateTime getPreviousExpiresAt() {
 		return previousExpiresAt;
 	}
 
-	public void setPreviousExpiresAt(Date previousExpiresAt) {
+	public void setPreviousExpiresAt(OffsetDateTime previousExpiresAt) {
 		this.previousExpiresAt = previousExpiresAt;
 	}
 	public String getCouponCode() {
@@ -384,12 +384,12 @@ public class Subscription {
 	public void setProductVersionNumber(Integer productVersionNumber) {
 		this.productVersionNumber = productVersionNumber;
 	}
-	
-	public Date getPreviousBillingDate() {
+
+	public OffsetDateTime getPreviousBillingDate() {
 		return previousBillingDate;
 	}
 
-	public void setPreviousBillingDate(Date previousBillingDate) {
+	public void setPreviousBillingDate(OffsetDateTime previousBillingDate) {
 		this.previousBillingDate = previousBillingDate;
 	}
 

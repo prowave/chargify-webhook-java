@@ -17,10 +17,10 @@
  */
 package io.prowave.chargify.webhook.bean;
 
-import java.util.Date;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.time.OffsetDateTime;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Dunner {
@@ -33,10 +33,10 @@ public class Dunner {
 	private Integer attempts;
 
 	@JsonProperty("last_attempted_at")
-	private Date lastAttemptedAt;
+	private OffsetDateTime lastAttemptedAt;
 
 	@JsonProperty("created_at")
-	private Date createdAt;
+	private OffsetDateTime createdAt;
 
 	@JsonProperty("revenue_at_risk_in_cents")
 	private String revenueAtRiskInCents;
@@ -65,19 +65,19 @@ public class Dunner {
 		this.attempts = attempts;
 	}
 
-	public Date getLastAttemptedAt() {
+	public OffsetDateTime getLastAttemptedAt() {
 		return lastAttemptedAt;
 	}
 
-	public void setLastAttemptedAt(Date lastAttemptedAt) {
+	public void setLastAttemptedAt(OffsetDateTime lastAttemptedAt) {
 		this.lastAttemptedAt = lastAttemptedAt;
 	}
 
-	public Date getCreatedAt() {
+	public OffsetDateTime getCreatedAt() {
 		return createdAt;
 	}
 
-	public void setCreatedAt(Date createdAt) {
+	public void setCreatedAt(OffsetDateTime createdAt) {
 		this.createdAt = createdAt;
 	}
 
@@ -89,6 +89,6 @@ public class Dunner {
 		this.revenueAtRiskInCents = revenueAtRiskInCents;
 	}
 
-	
+
 
 }

@@ -17,10 +17,10 @@
  */
 package io.prowave.chargify.webhook.bean;
 
-import java.util.Date;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.time.OffsetDateTime;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Statement {
@@ -31,22 +31,22 @@ public class Statement {
 	private Long subscriptionId;
 
 	@JsonProperty("opened_at")
-	private Date openedAt;
+	private OffsetDateTime openedAt;
 
 	@JsonProperty("total_in_cents")
 	private Long totalInCents;
 
 	@JsonProperty("closed_at")
-	private Date closedAt;
+	private OffsetDateTime closedAt;
 
 	@JsonProperty("updated_at")
-	private Date updatedAt;
+	private OffsetDateTime updatedAt;
 
 	@JsonProperty("created_at")
-	private Date createdAt;
+	private OffsetDateTime createdAt;
 
 	@JsonProperty("settled_at")
-	private Date settledAt;
+	private OffsetDateTime settledAt;
 
 	private String memo;
 
@@ -66,11 +66,11 @@ public class Statement {
 		this.subscriptionId = subscriptionId;
 	}
 
-	public Date getOpenedAt() {
+	public OffsetDateTime getOpenedAt() {
 		return openedAt;
 	}
 
-	public void setOpenedAt(Date openedAt) {
+	public void setOpenedAt(OffsetDateTime openedAt) {
 		this.openedAt = openedAt;
 	}
 
@@ -90,35 +90,35 @@ public class Statement {
 		this.totalInCents = totalInCents;
 	}
 
-	public Date getClosedAt() {
+	public OffsetDateTime getClosedAt() {
 		return closedAt;
 	}
 
-	public void setClosedAt(Date closedAt) {
+	public void setClosedAt(OffsetDateTime closedAt) {
 		this.closedAt = closedAt;
 	}
 
-	public Date getUpdatedAt() {
+	public OffsetDateTime getUpdatedAt() {
 		return updatedAt;
 	}
 
-	public void setUpdatedAt(Date updatedAt) {
+	public void setUpdatedAt(OffsetDateTime updatedAt) {
 		this.updatedAt = updatedAt;
 	}
 
-	public Date getCreatedAt() {
+	public OffsetDateTime getCreatedAt() {
 		return createdAt;
 	}
 
-	public void setCreatedAt(Date createdAt) {
+	public void setCreatedAt(OffsetDateTime createdAt) {
 		this.createdAt = createdAt;
 	}
 
-	public Date getSettledAt() {
+	public OffsetDateTime getSettledAt() {
 		return settledAt;
 	}
 
-	public void setSettledAt(Date settledAt) {
+	public void setSettledAt(OffsetDateTime settledAt) {
 		this.settledAt = settledAt;
 	}
 

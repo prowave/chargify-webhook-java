@@ -17,10 +17,10 @@
  */
 package io.prowave.chargify.webhook.bean;
 
-import java.util.Date;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.time.OffsetDateTime;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Transaction {
@@ -32,7 +32,7 @@ public class Transaction {
 	private Boolean success;
 
 	@JsonProperty("created_at")
-	private Date createAt;
+	private OffsetDateTime createAt;
 
 	@JsonProperty("transaction_type")
 	private String transactionType;
@@ -137,11 +137,11 @@ public class Transaction {
 		this.success = success;
 	}
 
-	public Date getCreateAt() {
+	public OffsetDateTime getCreateAt() {
 		return createAt;
 	}
 
-	public void setCreateAt(Date createAt) {
+	public void setCreateAt(OffsetDateTime createAt) {
 		this.createAt = createAt;
 	}
 
